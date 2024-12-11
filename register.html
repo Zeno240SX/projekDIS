@@ -75,16 +75,19 @@
     </div>
   
 
-    <div class="site-section">
-  <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+     <div class="site-section">
+  <div class="container d-flex justify-content-center align-items-center" style="min-height: 40vh;">
     <div class="col-md-6">
       <div class="text-center mb-4">
-        <h2><strong class="text-primary">Register</strong></h2>
+        <h1><strong class="text-primary">Register</strong></h1>
       </div>
       <div class="p-3 p-lg-5 border">
+        <div id="notification" style="color: red; display: none; text-align: center; margin-bottom: 15px;">
+          Harap isi semua kolom yang diperlukan!
+        </div>
         <div class="form-group row">
           <div class="col-md-12">
-            <label for="c_fname" class="text-black">Full Name <span class="text-danger">*</span></label>
+            <label for="c_fname" class="text-black">Name <span class="text-danger">*</span></label>
             <input type="text" class="form-control" id="c_fname" name="c_fname">
           </div>
         </div>
@@ -111,7 +114,7 @@
         </div>
 
         <div class="form-group text-center">
-          <a href="index2.html" class="btn btn-md height-auto px-4 py-2 btn-primary">Register</a>
+          <button type="button" id="registerButton" class="btn btn-md height-auto px-4 py-2 btn-primary">Register</button>
         </div>
 
         <div class="form-group row text-center">
@@ -124,6 +127,32 @@
   </div>
 </div>
 
+<script>
+  document.getElementById('registerButton').addEventListener('click', function() {
+    const name = document.getElementById('c_fname').value.trim();
+    const email = document.getElementById('c_email').value.trim();
+    const password = document.getElementById('c_password').value.trim();
+    const passwordConfirm = document.getElementById('c_password_confirm').value.trim();
+    const notification = document.getElementById('notification');
+
+     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!name || !email || !password || !passwordConfirm) {
+      notification.textContent = 'Harap isi semua kolom yang diperlukan!';
+      notification.style.display = 'block';
+    } else if (!emailRegex.test(email)) {
+      notification.textContent = 'Harap masukkan email yang valid!';
+      notification.style.display = 'block';
+    } else if (password !== passwordConfirm) {
+      notification.textContent = 'Password dan Konfirmasi Password tidak cocok!';
+      notification.style.display = 'block';
+    } else {
+      notification.style.display = 'none';
+      // Redirect to index2.html
+      window.location.href = 'index2.html';
+    }
+  });
+</script>
         <!-- </form> -->
       
 
