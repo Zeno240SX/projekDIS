@@ -24,7 +24,28 @@
 </head>
 
 <body>
+<style>
+.site-blocks-cover {
+  background-image: url('images/animasi.gif');
+  background-size: contain; /* Menjaga gambar agar tetap proporsional */
+  background-repeat: no-repeat; /* Tidak mengulang gambar */
+  background-position: center; /* Memusatkan gambar */
+  width: auto%; /* Lebar penuh */
+  height: 200px; /* Tentukan tinggi default */
+}
 
+@media screen and (max-width: 768px) {
+  .site-blocks-cover {
+    height: 250px; /* Sesuaikan tinggi untuk perangkat tablet */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .site-blocks-cover {
+    height: 200px; /* Sesuaikan tinggi untuk perangkat mobile */
+  }
+}
+</style>
   <div class="site-wrap">
     <div class="site-navbar py-2">
       <div class="search-wrap">
@@ -72,9 +93,10 @@
       </div>
     </div>
 
-    <div class="site-blocks-cover overlay" style="background-image: url('images/animasi.gif');">
-      
-    </div>
+   
+      <div class="site-blocks-cover overlay" 
+        style="background-image: url('images/animasi.gif');">
+      </div>
     
     
     <div class="site-section py-5" data-aos="fade">
@@ -188,17 +210,7 @@
       </div>
     </div>
 
-    <div class="site-section bg-image overlay" style="background-image: url('images/hero_bg_2.jpg');">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-         <div class="col-lg-7">
-           <h3 class="text-white">Sign up for discount up to 55% OFF</h3>
-           <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo omnis voluptatem consectetur quam.</p>
-           <p class="mb-0"><a href="#" class="btn btn-outline-white">Sign up</a></p>
-         </div>
-        </div>
-      </div>
-    </div>
+    
 
     <div class="site-section site-section-sm site-blocks-1 border-0" data-aos="fade">
       <div class="container">
