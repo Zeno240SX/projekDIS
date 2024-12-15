@@ -24,6 +24,28 @@
 </head>
 
 <body>
+<style>
+.site-blocks-cover {
+  background-image: url('images/animasi.gif');
+  background-size: contain; /* Menjaga gambar agar tetap proporsional */
+  background-repeat: no-repeat; /* Tidak mengulang gambar */
+  background-position: center; /* Memusatkan gambar */
+  width: 100%; /* Lebar penuh */
+  height: 400px; /* Tentukan tinggi default */
+}
+
+@media screen and (max-width: 768px) {
+  .site-blocks-cover {
+    height: 250px; /* Sesuaikan tinggi untuk perangkat tablet */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .site-blocks-cover {
+    height: 200px; /* Sesuaikan tinggi untuk perangkat mobile */
+  }
+}
+</style>
 
   <div class="site-wrap">
 
@@ -60,8 +82,7 @@
         <div class="d-flex align-items-center">
           <!-- Login and Sign-up Buttons -->
           <a href="login.html" class="btn btn-outline-primary btn-sm mr-2">Login</a>
-          <a href="register.html" class="btn btn-primary btn-sm mr-3">Sign-up</a>
-
+          
           <!-- Search Icon -->
           <a href="#" class="icons-btn d-inline-block js-search-open mr-3"><span class="icon-search"></span></a>
           
@@ -70,14 +91,19 @@
               <span class="icon-shopping-bag"></span>
               <span class="number">2</span>
           </a>
+          <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none">
+          <span class="icon-menu"></span>
+        </a>
       </div>
+
 
 
       </div>
     </div>
 
-      <div class="site-blocks-cover overlay" style="background-image: url('images/animasi.gif');">
-    </div>
+      <div class="site-blocks-cover overlay" 
+        style="background-image: url('images/animasi.gif');">
+      </div>
 
     <div class="site-section py-5">
       <div class="container">
