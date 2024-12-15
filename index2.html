@@ -24,6 +24,28 @@
 </head>
 
 <body>
+<style>
+.site-blocks-cover {
+  background-image: url('images/animasi.gif');
+  background-size: contain; /* Menjaga gambar agar tetap proporsional */
+  background-repeat: no-repeat; /* Tidak mengulang gambar */
+  background-position: center; /* Memusatkan gambar */
+  width: 100%; /* Lebar penuh */
+  height: 400px; /* Tentukan tinggi default */
+}
+
+@media screen and (max-width: 768px) {
+  .site-blocks-cover {
+    height: 250px; /* Sesuaikan tinggi untuk perangkat tablet */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .site-blocks-cover {
+    height: 200px; /* Sesuaikan tinggi untuk perangkat mobile */
+  }
+}
+</style>
 
   <div class="site-wrap">
 
@@ -43,20 +65,21 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="index2.html" class="js-logo-clone"><strong class="text-primary">Klinik</strong>Klik</a>
+              <a href="index.html" class="js-logo-clone"><strong class="text-primary">Klinik</strong>Klik</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li><a href="index2.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Toko</a></li>
                 <li><a href="chatdok.html">Chat Dokter</a></li>
                 <li><a href="about.html">About</a></li>
               </ul>
             </nav>
           </div>
-          <div class="icons">
+          
+        <div class="icons">
           <!-- Account Circle -->
          <a href="profil.html" class="account-circle">
           <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
@@ -73,11 +96,14 @@
         </a>
       </div>
 
+
+
       </div>
     </div>
 
-      <div class="site-blocks-cover overlay" style="background-image: url('images/animasi.gif');">
-    </div>
+      <div class="site-blocks-cover overlay" 
+        style="background-image: url('images/animasi.gif');">
+      </div>
 
     <div class="site-section py-5">
       <div class="container">
